@@ -16,12 +16,7 @@ Po dokončení ťahania kariet sa porovnávajú hodnoty konečných kariet.
 
 ## Čo je blackjack?
 
-Ak prvé dve karty dávajú spolu 21 bodov, ide o **blackjack**.
-
-- Hráč s blackjackom vyhráva **3:2**, ak ho dealer nemá.
-- Ak majú obaja blackjack → remíza.
-- Ak má dealer otvorenú kartu s hodnotou 10, kontroluje zakrytú kartu.
-- Poistenie je možné, ak má dealer tuza.
+Ak prvé dve karty v súčte dávajú 21 bodov, takáto kombinácia sa nazýva blackjack. Ak dealer získa blackjack, všetci hráči prehrávajú, okrem tých, ktorí majú tiež blackjack. Takýto prípad sa považuje za remízu a stávka sa vráti hráčovi. Ak hráč má blackjack a dealer nie, hráč vyhráva a dostane výplatu 3 ku 2 zo svojej stávky. Ak má otvorená karta dealera hodnotu 10 bodov, dealer sa pozrie na svoju zakrytú kartu. V prípade, že sa zozbierala kombinácia blackjack, dealer otvorí svoje karty a kolo hry končí.
 
 ---
 
@@ -29,32 +24,26 @@ Ak prvé dve karty dávajú spolu 21 bodov, ide o **blackjack**.
 
 ## Kroky hráča
 
-Ak nikto nemá blackjack, hráč si môže vybrať:
+Ak dealer ani hráč nemajú blackjack, hráč po rozdaní kariet môže zvoliť jednu z viacerých akcií:
+ - „Rozdeliť“. K dispozícii len v prípade, ak má v ruke dve karty rovnakej hodnoty. Hráč zdvojnásobí svoju stávku, rozdelí ruku na dve a dostane dve ďalšie karty. Tieto ruky sa ďalej hrajú nezávisle.
+ - „Ešte“. Hráč si vezme ďalšiu kartu. Táto akcia sa môže opakovať, kým súčet bodov neprekročí 21.
+ - „Zdvojnásobiť“. Hráč zdvojnásobí svoju stávku, vezme si presne jednu ďalšiu kartu a zafixuje svoje karty.
+ - „Dosť“. Hráč zafixuje svoje karty.
 
-- **Rozdeliť (Split)** – pri dvoch rovnakých kartách.
-- **Ešte (Hit)** – vziať ďalšiu kartu.
-- **Zdvojnásobiť (Double)** – zdvojnásobiť stávku a vziať presne jednu kartu.
-- **Dosť (Stand)** – ukončiť ťahanie.
-
-Ak hráč prekročí 21 → prehráva.
+Ak hráč nazbieral viac ako 21 bodov, prehráva kolo.
 
 ---
 
 ## Kroky krupiéra
 
-Krupiér:
-- Otvorí zakrytú kartu.
-- Ťahá do hodnoty minimálne 17.
-- Ak prekročí 21 → všetci aktívni hráči vyhrávajú.
+Potom, čo hráči zafixovali svoje karty, krupiér otvorí zakrytú kartu.
+V prípade potreby krupiér berie ďalšie karty, kým suma bodov nedosiahne 17 alebo viac. Ak počet bodov krupiéra prekročí 21, všetci hráči, ktorí neopustili hru, automaticky vyhrávajú, bez ohľadu na počet bodov.
 
 ---
 
 ## Pravidlo poistenia
 
-Ak má dealer tuza:
-- Hráč môže uzavrieť poistenie (½ základnej stávky).
-- Ak má dealer blackjack → výplata 2:1.
-- Ak nie → poistenie sa prehráva.
+Osobitný prípad: ak má dealer otvorenú kartu tuz, hráčom bude ponúknutá dodatočná stávka „poistenie“ vo výške polovice ich základnej stávky. Potom, čo všetci hráči prijmú rozhodnutie, dealer pozrie na svoju zakrytú kartu. V prípade, že dealer má blackjack, na stávky „poistenie“ sa vypláca výhra 2 ku 1. Ak dealer nemá blackjack, stávky „poistenie“ idú do banku a hra pokračuje ako zvyčajne.
 
 ---
 
@@ -72,141 +61,172 @@ Ak má dealer tuza:
 
 # Počítanie bodov
 
-- 2–10 → nominálna hodnota  
-- J, Q, K → 10 bodov  
-- A (Tuz) → 1 alebo 11 bodov  
+Pri počítaní bodov sa berú do úvahy hodnoty kariet: karty od 2 do 10 dávajú počet bodov rovný svojej hodnote, karty J (Valet), Q (Kráľovná), K (Kráľ) dávajú 10 bodov. A (Tuz) má hodnotu 1 alebo 11 bodov, v závislosti od toho, pri akej hodnote súčet bodov neprekročí 21.
 
 ---
 
 # Herná skúsenosť
 
-Celkovo bola skúsenosť našej skupiny pozitívna. Pravidlá sú jednoduché a pochopiteľné už po niekoľkých kolách.
+Celkovo bola skúsenosť našej skupiny s hrou blackjack pomerne pozitívna: táto kartová hra sa výrazne vyznačuje jednoduchými pravidlami, takže aj hráči, ktorí túto hru nikdy nehrali, pochopili jej podstatu už po prvých dvoch kolách.
+Na druhej strane, jednoduchosť pravidiel vytvorila problém rutiny a absencie strategických krokov. Po približne ôsmom až desiatom kole sa hra hrá automaticky a nedáva hráčovi možnosť veľa premýšľať a poraziť krupiéra pomocou zložitej a originálnej stratégie, čo spôsobuje, že hra sa stáva trochu nudnou. Náš tím nevydržal viac ako 20 kôl.
+Na pozadí toho vyniká aj ďalšia zvláštnosť, a to závislosť od šťastia. Vzhľadom na to, že v hre chýba možnosť strategického myslenia, hráči sa veľmi často spoliehajú na bežné šťastie. Ako záver, v našom tíme s 5 hráčmi jeden hráč vyhrával veľmi veľa, jeden vyhrával, ale nebol až tak úspešný, jeden mal celý čas striedavý úspech a poslední dvaja prehrali všetky imitačné žetóny.
 
-Postupne sa však objavila rutina a nedostatok hlbšej stratégie. Po 8–10 kolách hra pôsobila automaticky a menej dynamicky. Veľkú úlohu zohrával faktor šťastia.
-
-V skupine 5 hráčov:
-- 1 hráč vyhrával výrazne,
-- 1 hráč mierne vyhrával,
-- 1 mal striedavý úspech,
-- 2 hráči prehrali všetky žetóny.
 
 ---
 
 # SWOT analýza – klasická verzia
 
-## Strengths
-- Jasný cieľ (21 bez bustu)
-- Rýchle kolá
-- Strategické rozhodnutia
-- Napätie zo skrytej karty dealera
-- Učiteľná stratégia
-
-## Weaknesses
-- Hráč bustne skôr než dealer
-- Variancia
-- Repetitívnosť basic strategy
-- Rozdiel 3:2 vs 6:5
-
-## Opportunities
-- Edukácia (EV, pravdepodobnosť)
-- Digitálne verzie
-- Turnaje
-- Varianty režimov
-
-## Threats
-- Hazard stigma
-- Regulačné obmedzenia
-- Konkurencia
-- „Kasíno vždy vyhrá“ efekt
+|  | **Užitočné** | **Škodlivé** |
+|---|---|---|
+| **Vnútorné atribúty** | **Strengths:**<br>• Jasný cieľ: 21 bez bustu.<br>• Rýchle kolá, vysoká znovuhrateľnosť.<br>• Rozhodnutia: hit/stand/double/split.<br>• Napätie: krupiérova skrytá karta.<br>• Jednoduchý balíček, rýchla príprava.<br>• Učiteľná stratégia (zač. → pokroč.). | **Weaknesses:**<br>• Hráč bustne skôr než krupiér (vnímaná neférovosť).<br>• Výnimky pravidiel → zmätok (soft/hard, split, S17/H17, double).<br>• Variancia → série prehier aj pri dobrej hre.<br>• Basic strategy pôsobí repetitívne.<br>• Výplaty 3:2 vs 6:5 menia férovosť. |
+| **Vonkajšie atribúty** | **Opportunities:**<br>• Edukácia: pravdepodobnosť, EV, riziko/bankroll.<br>• Digitál: tutoriál, nápovedy, štatistiky.<br>• Social: best-of-N, mini turnaje.<br>• Režimy/varianty pre sviežosť.<br>• Známa hra → ľahké zapojenie. | **Threats:**<br>• Hazard stigma → zákony/vek/platforomy.<br>• Návykové správanie → etika, reputácia.<br>• Podvádzanie: karty / RNG dôvera.<br>• Silná konkurencia kartoviek.<br>• "Kasíno vždy vyhrá" → odchod hráčov. |
 
 ---
 
-# Prvá iterácia – odstránenie remízy
+# Prvá iterácia zmeny pravidiel hry:
 
-Pri rovnosti si obaja ťahajú karty, kým sa nerozhodne výsledok.
+Táto verzia hry odstraňuje možnosť remízy.
 
-## SWOT – bez remízy
+Ak hráč aj dealer dosiahnu rovnaký počet bodov, obaja si ťahajú po jednej karte dovtedy, kým sa výsledok nerozhodne. Víťazom sa stáva ten, kto má finálny počet bodov bližší k 21 (resp. nižší bez prekročenia limitu).
+
+Cieľom úpravy je zvýšiť dynamiku hry, eliminovať „neutrálne“ kolá a priniesť rozhodujúci moment v každej partii.
+
+
+## SWOT analýza verzie bez remízy:
 
 ### Strengths
-- Každé kolo má víťaza
-- Vyššia dynamika
-- Silnejší emocionálny moment
+- **Každá hra má víťaza** – žiadne „mŕtve“ kolá bez výsledku.
+- **Vyššia dynamika hry** – viac napätia a akcie.
+- **Silnejší emocionálny zážitok** – každá remíza sa mení na rozhodujúci moment.
+- **Zvýšený obrat stávok** – žiadne vracanie stávky pri rovnosti.
 
 ### Weaknesses
-- Vyššia volatilita
-- Zmena matematickej rovnováhy
+- Zvýšená volatilita pre hráča (remíza sa mení na výhru alebo prehru).
+- Možné negatívne vnímanie zo strany konzervatívnych hráčov.
+- Zložitejšia matematická analýza dopadu na house edge.
+- Potenciálne spomalenie hry pri častých rovnostiach.
+
 
 ### Opportunities
-- „No Tie Blackjack“
-- Diferenciácia na trhu
+- Možnosť pozicionovať ako **„Blackjack bez remíz“** alebo **„No Tie Blackjack“**.
+- Vhodné pre dynamickú online verziu (automatický rozhodovací ťah).
+- Možnosť jemného nastavenia RTP cez iné pravidlá (napr. 777).
+- Diferenciácia od klasického blackjacku na trhu.
+
 
 ### Threats
-- Riziko nevyváženého house edge
+- Riziko nevyváženého house edge bez dôkladného testovania.
+- Potenciálne regulačné požiadavky pri zmene základnej mechaniky.
+- Skúsení hráči môžu analyzovať novú optimálnu stratégiu.
+- Ak bude hra príliš tvrdá, môže klesnúť retencia hráčov.
+
+## Zhodnotenie iterácie
+
+Odstránenie remízy predstavuje zásadnú zmenu základnej mechaniky hry. Každé kolo má jednoznačný výsledok – výhru alebo prehru – čo zvyšuje dynamiku, tempo a emocionálne napätie.
+
+Z pohľadu hráčskeho zážitku ide o výrazne akčnejšiu verziu blackjacku, kde sa eliminuje pocit „strateného kola“. Každá situácia rovnosti sa mení na rozhodujúci moment, čo môže zvýšiť angažovanosť hráčov.
+
+Na druhej strane však dochádza k zvýšeniu volatility a k zmene matematickej rovnováhy hry. Keďže remíza v klasickom blackjacku znižuje varianciu, jej odstránenie môže mať významný dopad na house edge. Bez dôkladnej simulácie existuje riziko nevyváženosti hry.
+
+Celkovo možno túto iteráciu hodnotiť ako:
+- Dynamickú a napínavejšiu než klasická verzia
+- Marketingovo odlíšiteľnú („Blackjack bez remíz“)
+- Matematicky citlivú – vyžaduje presné testovanie a kalibráciu
 
 ---
 
 # Druhá iterácia – pravidlo „777“
 
-Ak hráč dostane presne tri sedmičky → automatická výhra **5:1**.
+## Pravidlo „777“
 
-## SWOT – verzia 777
+Do hry bolo pridané špeciálne bonusové pravidlo **„777“**:
+- Ak hráč dostane **presne tri karty s nominálnou hodnotou 7**, automaticky vyhráva s výplatou **5:1**.
+- Ak hráč aj dealer získajú kombináciu troch sedmičiek, vznikne remíza. Tento prípad je riešený podľa pravidiel definovaných v prvej iterácii (dodatočné ťahanie kariet až do rozhodnutia).
+V prípade konečného víťazstva hráča získa hráč výhru **5:1**.
+V prípade víťazstva dealera hráč prehráva svoju stávku.
+
+Toto pravidlo zavádza do hry bonusový mechanizmus, ktorý rozširuje pôvodnú štruktúru blackjacku bez zásadnej zmeny základnej mechaniky hry.
+
+## SWOT analýza verzie s pravidlom „777“
 
 ### Strengths
-- Efekt „wow“
-- Dodatočný cieľ
-- Marketingový potenciál
+- **Efekt „wow“** – pravidlo 777 prináša vzácny a emocionálne silný moment.
+- **Zvýšený záujem hráčov** – vzniká dodatočný cieľ (získať kombináciu 777).
+- **Vyššia atraktivita hry** – možnosť nadštandardnej výhry (5:1) zvyšuje napätie.
+- **Marketingový potenciál** – hra pôsobí dynamickejšie a originálnejšie.
 
 ### Weaknesses
-- Nízka pravdepodobnosť výskytu
+- **Nízka pravdepodobnosť výskytu** – pri viacerých balíčkoch môže byť kombinácia 777 veľmi zriedkavá.
 
 ### Opportunities
-- „Blackjack 777“
-- Online animácie
-- Úprava výplaty
+- Možnosť vytvoriť variant hry pod názvom **„Blackjack 777“** alebo **„Blackjack Extreme“**.
+- Vhodné pre online verziu s animáciou a zvukovým efektom bonusu.
+- Možnosť vyváženia výplaty (5:1 možno zmeniť po testoch).
+
 
 ### Threats
-- Narušenie rovnováhy
-- Optimalizácia stratégie na 777
+- **Narušenie matematickej rovnováhy hry** – hráč môže získať vysokú výhru bez výrazne vyššieho rizika.
+- Keďže kombinácia 7-7-7 predstavuje hodnotu 21, hráč pri dvoch sedmičkách riskuje podobne ako pri bežnej hre, ale má potenciál výrazne vyššej výhry.
+- Ak je výplata 5:1 príliš vysoká vzhľadom na pravdepodobnosť, môže to zvýšiť výhodu hráča nad akceptovateľnú úroveň.
+- Skúsení hráči môžu začať optimalizovať stratégiu špeciálne na získanie 777.
+
+## Zhodnotenie iterácie
+
+Pravidlo „777“ zvyšuje atraktivitu hry a pridáva emocionálny prvok bez zásadného narušenia základnej mechaniky blackjacku.
+
+Na udržanie bilancie je však potrebné:
+
+- Vypočítať pravdepodobnosť výskytu kombinácie 777.
+- Prípadne upraviť výplatný pomer.
+
+Celkovo ide o zmenu, ktorá zvyšuje zábavnosť hry, no vyžaduje matematické testovanie, aby sa zachovala férovosť a vyváženosť.
 
 ---
 
-# Tretia iterácia – odstránenie poistenia
+# Tretia iterácia zmeny pravidiel hry
 
-Poistenie bolo odstránené kvôli zjednodušeniu hry.
+Keďže v druhej iterácii bolo pridané pravidlo **„777“**, v tretej sme odstránili **poistenie**, aby sme zjednodušili pravidlá a znížili počet „vedľajších rozhodnutí“ počas rozdávania. To znamená, že keď má dealer otvoreného tuza, nevzniká dodatočná možnosť uzavrieť poistnú stávku – kolo pokračuje štandardnými akciami hráča (ešte/dosť atď.) bez akéhokoľvek „poistného“ kroku.
 
-## SWOT – bez poistenia
+Cieľom bolo zjednodušiť priebeh rozdávania a urýchliť tempo hry tým, že sa odstránilo zbytočné vedľajšie rozhodnutie v prípade, že dealer má tuz, aby sa po pridaní pravidla 777 pozornosť sústredila na hlavné akcie hráča.
+
+
+## SWOT analýza verzie bez poistenia
 
 ### Strengths
-- Jednoduchšie pravidlá
-- Rýchlejšie tempo
-- Beginner-friendly verzia
+- **Jednoduchšie pravidlá:** ľahšie vysvetľovať a rýchlejšie učiť nových hráčov.
+- **Rýchlejší a čistejší herný cyklus:** menej prestávok/podkrokov počas rozdávania.
+- **Viac zamerania na jadro hry:** rozhodnutia hráča sa zredukujú na hlavné akcie („Ešte“ / „Dosť“ / „Zdvojnásobiť“ / „Rozdeliť“), a nie na dodatočné stávky.
+- **Emocionálny „háčik“ zostáva cez 777:** je tu dodatočný cieľ/moment radosti bez komplikovania základných rozhodnutí.
 
 ### Weaknesses
-- Menej strategických možností
-- Môže pôsobiť ako „oklieštená“ verzia
+- **Menej variability výberu:** skúseným hráčom môže chýbať dodatočná možnosť.
+- **Menší pocit kontroly v situácii s esom krupiéra:** hráč nemôže „reagovať stávkou“ na potenciálny blackjack krupiéra.
+- **Riziko vnímania ako „nie klasický blackjack“:** časť publika očakáva poistenie ako štandard.
 
 ### Opportunities
-- Mobilná verzia
-- Kratšie herné session
+- **Pozicionovanie ako „beginner-friendly blackjack“:** rýchlo sa do toho dostať, ľahko hrať, menej chybných rozhodnutí.
+- **Lepšia vhodnosť pre mobilnú/online verziu:** kratšie a dynamickejšie sedenia.
 
 ### Threats
-- Očakávania skúsených hráčov
+- **Balans/očakávania:** nespokojnosť časti skúsených hráčov, ktorí sú zvyknutí na plnú sadu klasických možností.
+- **Porovnávanie s „originálom“:** môžu kritizovať ako „orezanú“ verziu.
+
+## Zhodnotenie iterácie
+
+V dôsledku toho zrušenie poistenia urobilo pravidlá ešte jednoduchšími a zrozumiteľnejšími pre nováčikov a urýchlilo tempo rozdávania kariet, avšak pre skúsených hráčov to môže vyzerať ako zbytočné zjednodušenie, pretože klasický blackjack nie je príliš zložitý a zrušenie poistenia dodatočne znižuje rozmanitosť rozhodnutí a odstraňuje jednu zo strategických možností, ktorých v blackjacku aj tak nie je veľa.
 
 ---
 
 # Záver
 
-Každá iterácia zvýšila dynamiku a odlíšila hru od klasickej verzie.  
-Najväčší prínos prinieslo pravidlo 777, ktoré zvýšilo emocionálnu hodnotu hry.
-
-Pre zachovanie férovosti je potrebné:
-- matematické testovanie,
-- výpočet pravdepodobností,
-- prípadná kalibrácia výplat.
+# TODO
 
 ---
 
 # Autori
 
-- antikman
--
+- Ivan Honcharuk
+- Vladyslav Stakhov
+- Anton Allahveriiev
+- Maksym Zvarych
+- Illia Zhyzhyn
