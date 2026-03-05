@@ -13,7 +13,7 @@ Slogan:
 
 # Poster
 
-`ad.png`
+![Blackjack poster](ad.png)
 
 ---
 
