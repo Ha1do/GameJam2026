@@ -219,7 +219,11 @@ V dôsledku toho zrušenie poistenia urobilo pravidlá ešte jednoduchšími a z
 
 # Záver
 
-# TODO
+Počas playtestingu sme zistili, že blackjack je hra s veľmi jednoduchými pravidlami, ktorú hráči pochopia už po niekoľkých kolách. Hra je rýchla a dynamická, no po dlhšom hraní môže začať pôsobiť trochu repetitívne, pretože veľká časť výsledku závisí od náhody.
+
+Navrhnuté iterácie sa snažili hru mierne oživiť a pridať nové momenty napätia bez zásadného narušenia základnej mechaniky. Zmeny ako odstránenie remízy, zavedenie bonusového pravidla „777“ alebo odstránenie poistenia ukazujú, že aj malé úpravy pravidiel môžu výrazne ovplyvniť tempo hry, hráčsky zážitok a strategické rozhodovanie. Zároveň je dôležité si uvedomiť, že klasický blackjack je hra, ktorej pravidlá sa vyvíjali dlhodobo a sú relatívne dobre vyvážené, preto aj malé zmeny môžu ovplyvniť pravdepodobnosti výhier a celkový herný balans.
+
+Celkovo možno povedať, že vykonané úpravy robia hru dynamickejšou a jednoduchšou na pochopenie, pričom zachovávajú základný charakter blackjacku. Takáto verzia môže byť atraktívna najmä pre príležitostných alebo nových hráčov, no na potvrdenie jej vyváženosti by bolo vhodné vykonať ďalší playtesting alebo matematické simulácie.
 
 ---
 
