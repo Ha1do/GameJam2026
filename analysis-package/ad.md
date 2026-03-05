@@ -1,6 +1,6 @@
 # Creative Ad Concept
 
-Názov reklamy: **Blackjack – tri sekery**
+Názov reklamy: **BlackJack EXTREME**
 
 Hlavnou myšlienkou reklamy je špeciálna kombinácia troch sedmičiek (777). 
 Ak hráč získa kombináciu 777, získava bonusovú výhru s výplatou 5:1. 
