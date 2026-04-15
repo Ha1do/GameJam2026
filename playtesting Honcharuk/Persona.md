@@ -1,4 +1,4 @@
-##Playtester Persona: Ivan, 20 rokov
+## Playtester Persona: Ivan, 20 rokov
 
 Ivan je študent, ktorý vo voľnom čase často hrá hry, prevažne na PC.
 
