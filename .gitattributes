@@ -1,0 +1,4 @@
+DoomScroling&TungTungShur/Assets/LoafbrrAssets/BackroomsLikeAssetRe/**/*.png filter=lfs diff=lfs merge=lfs -text
+DoomScroling&TungTungShur/Assets/LoafbrrAssets/BackroomsLikeAssetRe/**/*.exr filter=lfs diff=lfs merge=lfs -text
+DoomScroling&TungTungShur/Assets/LoafbrrAssets/BackroomsLikeAssetRe/**/*.fbx filter=lfs diff=lfs merge=lfs -text
+DoomScroling&TungTungShur/Assets/LoafbrrAssets/BackroomsLikeAssetRe/**/*.zip filter=lfs diff=lfs merge=lfs -text
