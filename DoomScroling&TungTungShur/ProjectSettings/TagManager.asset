@@ -5,12 +5,16 @@ TagManager:
   serializedVersion: 3
   tags:
   - CinemachineTarget
+<<<<<<< HEAD
   - Enemy
+=======
+  - Monster
+>>>>>>> 9c85c8879186ab9254dfce109a598b8d44005fe9
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Walls
   - Water
   - UI
   - 
