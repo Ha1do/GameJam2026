@@ -9440,6 +9440,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1647424724}
   - component: {fileID: 1647424725}
+  - component: {fileID: 1647424726}
   m_Layer: 0
   m_Name: Director
   m_TagString: Untagged
@@ -9536,6 +9537,19 @@ PlayableDirector:
   m_ExposedReferences:
     m_References:
     - 484a870076fe1f74faf4e8d1ff88b69c: {fileID: 1807984915}
+--- !u!114 &1647424726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647424722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee345faf37644754d984f46c5793fc4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CutsceneEnd
+  director: {fileID: 1647424725}
 --- !u!1001 &1677497836
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -377,4 +377,40 @@ public class Jort_brain : MonoBehaviour
         Gizmos.color = Color.magenta;
         Gizmos.DrawWireSphere(lastKnownPlayerPosition, searchRadius);
     }
+
+    public void ForceAlertToPlayer()
+    {
+        if (player == null || agent == null || !agent.enabled)
+            return;
+
+        currentState = EnemyState.Chase;
+        agent.isStopped = false;
+        agent.stoppingDistance = stoppingDistance;
+
+        lastKnownPlayerPosition = player.position;
+        reachedLastKnownPosition = false;
+        hasSearchPoint = false;
+        waitTimer = 0f;
+        searchTimer = searchDuration;
+
+        agent.SetDestination(player.position);
+    }
+
+    public void ForceAlertToPosition(Vector3 worldPosition)
+    {
+        if (agent == null || !agent.enabled)
+            return;
+
+        currentState = EnemyState.Search;
+        agent.isStopped = false;
+        agent.stoppingDistance = 0f;
+
+        lastKnownPlayerPosition = worldPosition;
+        reachedLastKnownPosition = false;
+        hasSearchPoint = false;
+        waitTimer = 0f;
+        searchTimer = searchDuration;
+
+        agent.SetDestination(lastKnownPlayerPosition);
+    }
 }
