@@ -19,7 +19,7 @@ public class PlayerDeath : MonoBehaviour
         if (other.CompareTag(monsterTag)) Die();
     }
 
-    private void Die()
+    public void Die()
     {
         if (_isDead) return;
         _isDead = true;

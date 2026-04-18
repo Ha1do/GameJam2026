@@ -6,20 +6,23 @@ public class Player : MonoBehaviour
 {
     [Header("Counter")]
     public int maxValue = 100;
-    public int currentValue = 0;
+    public float currentValue = 0f;
     public int increaseStep = 10;
     public float increaseInterval = 6f;
 
     [Header("UI")]
     public TMP_Text counterText;
     public Image stressBarFill;
-    public GameObject deathPanel;
 
     [Header("Bar Animation")]
     public float barSmoothSpeed = 3f;
 
     [Header("Settings")]
-    public string enemyTag = "Enemy";
+    public string enemyTag = "Monster";
+
+    [Header("Phone Stress Reduce")]
+    public PhoneToggle phoneToggle;
+    public float reduceMultiplier = 2f;
 
     private float timer;
     private bool isDead = false;
@@ -27,40 +30,69 @@ public class Player : MonoBehaviour
     private float targetFill = 1f;
     private float currentFill = 1f;
 
+    private PlayerDeath playerDeath;
+
     void Start()
     {
-        currentValue = 0;
+        currentValue = 0f;
         timer = increaseInterval;
 
-        if (deathPanel != null)
-            deathPanel.SetActive(false);
+        playerDeath = GetComponent<PlayerDeath>();
+
+        if (phoneToggle == null)
+            phoneToggle = GetComponent<PhoneToggle>();
 
         UpdateUIInstant();
     }
 
     void Update()
     {
-        if (!isDead)
+        if (isDead) return;
+
+        if (phoneToggle != null && phoneToggle.IsPhoneOpen)
         {
-            timer -= Time.deltaTime;
-
-            if (timer <= 0f)
-            {
-                currentValue += increaseStep;
-
-                if (currentValue > maxValue)
-                    currentValue = maxValue;
-
-                timer = increaseInterval;
-
-                UpdateUI();
-
-                if (currentValue >= maxValue)
-                    Die();
-            }
+            ReduceStressWhilePhoneOpen();
+        }
+        else
+        {
+            IncreaseStressOverTime();
         }
 
         SmoothBar();
+    }
+
+    void IncreaseStressOverTime()
+    {
+        timer -= Time.deltaTime;
+
+        if (timer <= 0f)
+        {
+            currentValue += increaseStep;
+
+            if (currentValue > maxValue)
+                currentValue = maxValue;
+
+            timer = increaseInterval;
+
+            UpdateUI();
+
+            if (currentValue >= maxValue)
+                Die();
+        }
+    }
+
+    void ReduceStressWhilePhoneOpen()
+    {
+        float increasePerSecond = increaseStep / increaseInterval;
+        float reducePerSecond = increasePerSecond * reduceMultiplier;
+
+        currentValue -= reducePerSecond * Time.deltaTime;
+
+        if (currentValue < 0f)
+            currentValue = 0f;
+
+        timer = increaseInterval;
+        UpdateUI();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -79,7 +111,7 @@ public class Player : MonoBehaviour
             AddStress(20);
     }
 
-    void AddStress(int amount)
+    void AddStress(float amount)
     {
         currentValue += amount;
 
@@ -95,17 +127,17 @@ public class Player : MonoBehaviour
     void UpdateUI()
     {
         if (counterText != null)
-            counterText.text = "Stress: " + currentValue;
+            counterText.text = "Stress: " + Mathf.RoundToInt(currentValue);
 
-        targetFill = 1f - ((float)currentValue / maxValue);
+        targetFill = 1f - (currentValue / maxValue);
     }
 
     void UpdateUIInstant()
     {
         if (counterText != null)
-            counterText.text = "Stress: " + currentValue;
+            counterText.text = "Stress: " + Mathf.RoundToInt(currentValue);
 
-        targetFill = 1f - ((float)currentValue / maxValue);
+        targetFill = 1f - (currentValue / maxValue);
         currentFill = targetFill;
 
         if (stressBarFill != null)
@@ -127,21 +159,11 @@ public class Player : MonoBehaviour
     void Die()
     {
         if (isDead) return;
-
         isDead = true;
-        Debug.Log("Player died");
 
-        if (deathPanel != null)
-            deathPanel.SetActive(true);
-
-        MonoBehaviour[] scripts = GetComponents<MonoBehaviour>();
-        foreach (MonoBehaviour script in scripts)
-        {
-            if (script != this)
-                script.enabled = false;
-        }
-
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        if (playerDeath != null)
+            playerDeath.Die();
+        else
+            Debug.LogWarning("PlayerDeath не найден на объекте игрока");
     }
 }
