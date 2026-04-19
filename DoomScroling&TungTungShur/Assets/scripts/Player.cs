@@ -7,8 +7,8 @@ public class Player : MonoBehaviour
     [Header("Counter")]
     public int maxValue = 100;
     public float currentValue = 0f;
-    public int increaseStep = 10;
-    public float increaseInterval = 6f;
+    public int increaseStep = 3;
+    public float increaseInterval = 1f;
 
     [Header("UI")]
     public TMP_Text counterText;
