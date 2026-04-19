@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
+using TMPro;
+using System.Collections;
 
 public class PlayerDeath : MonoBehaviour
 {
     public GameObject deathScreenCanvas;
+    public TMP_Text restartText;
     public string monsterTag = "Monster";
 
     private bool _isDead = false;
@@ -29,6 +31,24 @@ public class PlayerDeath : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+
+        StartCoroutine(RestartCountdown(5f));
+    }
+
+    IEnumerator RestartCountdown(float time)
+    {
+        float remaining = time;
+
+        while (remaining > 0f)
+        {
+            if (restartText != null)
+                restartText.text = "Restarting in " + Mathf.CeilToInt(remaining);
+
+            yield return new WaitForSecondsRealtime(1f);
+            remaining -= 1f;
+        }
+
+        Restart();
     }
 
     public void Restart()
